@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import com.erwin.practice.Person;
 
 class PersonTest {
+	
+	static final String[] MY_STATE_VALUES = {"PENDING", "PROCESSING", "PROCESSED" };
 
 	@Test
 	public void shouldReturnHelloWorld() {
@@ -54,6 +56,23 @@ class PersonTest {
 		
 		for (Person person : persons) {
 			person.helloWorld();
+		}
+		
+		Person myPerson = new Person();
+		Person myPerson2 = new Person();
+		final Person[] person = {persons[0], persons[3], myPerson, myPerson2 };
+		
+		// for looping yang ada di class LoggingLevel as state variable
+		for (LoggingLevel state: LoggingLevel.values()) {
+			if(state == (LoggingLevel.PENDING)) {
+				
+			}
+			if(state == (LoggingLevel.PROCESSED)) {
+				
+			}
+			if(state == (LoggingLevel.PROCESSING)) {
+	
+			}
 		}
 	}
 
