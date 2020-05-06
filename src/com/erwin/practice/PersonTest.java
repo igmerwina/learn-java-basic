@@ -31,14 +31,30 @@ class PersonTest {
 	
 	@Test 
 	public void shouldReturnNumberOfPersonInLoop() {
-		
 		int i = 0 ;
 		while (i < 4) {
 			Person person1 = new Person();
 			i++;
 		}
-		
 		assertEquals(4, Person.numberOfPersons());
+	}
+	
+	@Test
+	public void demonstrateArrays() {
+		Person[] persons = new Person[4];
+		persons[0] = new Person();
+		persons[1] = new Person();
+		persons[2] = new Person();
+		persons[3] = new Person();
+		
+		for (int i = 0; i < persons.length; i++) {
+			persons[i] = new Person();
+			persons[i].helloWorld();
+		}
+		
+		for (Person person : persons) {
+			person.helloWorld();
+		}
 	}
 
 }
