@@ -28,5 +28,17 @@ class PersonTest {
 		Person person5 = new Person();
 		assertEquals(5 , Person.numberOfPersons());
 	}
+	
+	@Test 
+	public void shouldReturnNumberOfPersonInLoop() {
+		
+		int i = 0 ;
+		while (i < 4) {
+			Person person1 = new Person();
+			i++;
+		}
+		
+		assertEquals(4, Person.numberOfPersons());
+	}
 
 }
